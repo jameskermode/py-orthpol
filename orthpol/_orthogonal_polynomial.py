@@ -287,7 +287,7 @@ class ProductBasis(object):
         # The array cnt stores the number of terms we need to
         # increment for each dimension.
         cnt = np.zeros(num_dim, dtype='i')
-        for j, p in itertools.izip(range(num_dim), self.polynomials):
+        for j, p in zip(list(range(num_dim)), self.polynomials):
             if p.degree >= 1:
                 cnt[j] = 1
 
@@ -303,7 +303,7 @@ class ProductBasis(object):
             # Stores the inde of the term we are copying
             prev = 0
             # Loop over dimensions
-            for j, p in itertools.izip(range(num_dim), self.polynomials):
+            for j, p in zip(list(range(num_dim)), self.polynomials):
                 # Increment orders of cnt[j] terms for dimension j
                 for i in range(cnt[j]):
                     if terms_order[k - 1][prev + i][j] < p.degree:
