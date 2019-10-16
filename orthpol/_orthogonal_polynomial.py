@@ -17,7 +17,7 @@ import math
 import itertools
 from ._quadrature_rule import *
 from ._lancz import *
-import _orthpol as orthpol
+import orthpol._orthpol as orthpol
 
 
 class OrthogonalPolynomial(object):
@@ -74,7 +74,7 @@ class OrthogonalPolynomial(object):
     def num_output(self):
         return self._num_output
 
-    def __init__(self, degree, rv=None, left=-1, right=1, wf=lambda(x): 1.,
+    def __init__(self, degree, rv=None, left=-1, right=1, wf=None,
                  ncap=50, quad=None,
                  name='Orthogonal Polynomial'):
         """Construct the polynomial.
@@ -94,6 +94,8 @@ class OrthogonalPolynomial(object):
             name    ---     A name for the polynomial.
         """
         self.__name__ = name
+        if wf is None:
+            wf = lambda x: 1.0
         if rv is not None:
             left, right = rv.interval(1)
             wf = rv.pdf
