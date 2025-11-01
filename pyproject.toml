@@ -1,0 +1,43 @@
+[build-system]
+requires = ["meson-python>=0.15.0", "numpy>=2.0.0"]
+build-backend = "mesonpy"
+
+[project]
+name = "py-orthpol"
+version = "1.2.0"
+description = "Construct orthogonal polynomials with respect to arbitrary measures in Python"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE.txt"}
+authors = [
+    {name = "Ilias Bilionis", email = "ibilion@purdue.edu"},
+]
+maintainers = [
+    {name = "James Kermode"},
+]
+keywords = [
+    "orthogonal polynomials",
+    "arbitrary probability measures",
+    "polynomial chaos",
+    "generalized polynomial chaos",
+    "uncertainty quantification",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Fortran",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "numpy>=1.26.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/jameskermode/py-orthpol"
+Repository = "https://github.com/jameskermode/py-orthpol"
