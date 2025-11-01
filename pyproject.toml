@@ -1,6 +1,6 @@
 [build-system]
-requires = ["meson-python>=0.15.0", "numpy>=2.0.0"]
-build-backend = "mesonpy"
+requires = ["setuptools>=60", "wheel", "numpy>=2.0.0"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "py-orthpol"
@@ -41,3 +41,6 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/jameskermode/py-orthpol"
 Repository = "https://github.com/jameskermode/py-orthpol"
+
+[tool.setuptools]
+packages = ["orthpol"]
